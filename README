@@ -1,4 +1,15 @@
-This is your new Play application
+Tiny Quotes Viewer
 =================================
 
-This file will be packaged with your application, when using `activator dist`.
+A quotes viewer for BMF Bovespa stocks.
+
+Usage: ?code=[BOVESPA_QUOTE_CODE]
+
+Sugested browser: dwb
+
+Specs:
+---------
+
+* Play 2.3
+
+* Scala 2.11
