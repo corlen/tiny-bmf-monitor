@@ -2,7 +2,7 @@ package models
 
 import scala.xml.XML
 
-case class Quote(code: String, lastValue: String, lastUpdate: String)
+case class Quote(code: String, lastValue: String, lastUpdate: String, variation: String)
 
 object Quote {
 
@@ -14,7 +14,8 @@ object Quote {
           val code = (papel \ "@Codigo").text
           val lastValue = (papel \ "@Ultimo").text
           val lastUpdate = (papel \ "@Data").text
-          Quote(code, lastValue, lastUpdate)
+          val variation = (papel \ "@Oscilacao").text
+          Quote(code, lastValue, lastUpdate, variation)
       }
 
     quotes.toList
