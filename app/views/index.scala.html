@@ -1,0 +1,12 @@
+@(quotesList: List[Quote])
+@main(title = "Tiny Quotes Viewer") {
+<div id="quote_div">
+<table border="1" cellspacing="0">
+@for(quote <- quotesList){
+        <tr>
+            <td>@quote.code</td><td>@quote.lastValue</td><td>@quote.lastUpdate</td>
+        </tr>
+}
+</table>
+</div>
+}
