@@ -1,4 +1,6 @@
 @(quotesList: List[Quote])
+@import org.joda.time.DateTime
+@import org.joda.time.format.DateTimeFormat
 @main(title = "Tiny Quotes Viewer") {
 <div id="quote_div">
 <table border="1" cellspacing="0">
@@ -8,5 +10,6 @@
         </tr>
 }
 </table>
+<table><tr><td>Last update: @{DateTimeFormat.forPattern("dd/MM/yyyy HH:mm:ss").print(new DateTime)}</td></tr></table></td></tr></table>
 </div>
 }
